@@ -15,6 +15,10 @@ const App = () => {
 
   const handleInputChange = (e) => {
     setQuery(e.target.value);
+    // Reset All Button
+    const allButtons = document.querySelectorAll(".btns");
+    allButtons.forEach((button) => button.classList.remove("active"));
+    allButtons[0].classList.add("active");
   };
 
   const filteredItems = products.filter(
@@ -29,6 +33,14 @@ const App = () => {
   // Buttons Filter
   const handleClick = (e) => {
     setSelectedCategory(e.target.value);
+    e.target.classList.toggle("active");
+    setQuery(e.target.value);
+
+    // Reset All Button
+    const allButtons = document.querySelectorAll(".btns");
+    allButtons.forEach((button) => button.classList.remove("active"));
+
+    e.target.classList.toggle("active");
   };
 
   const filteredData = (products, selected, query) => {

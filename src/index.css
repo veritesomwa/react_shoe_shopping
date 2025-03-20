@@ -24,3 +24,7 @@ li {
   color: #323232;
   cursor: pointer;
 }
+.active {
+  background-color: rgb(226, 129, 120) !important;
+  color: white;
+}
