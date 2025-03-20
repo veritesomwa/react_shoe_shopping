@@ -9,7 +9,7 @@ const Nav = ({ query, handleInputChange }) => {
         <input
           type="text"
           onChange={handleInputChange}
-          // value={query}
+          // value={query
           className="search-input"
           placeholder="Enter your search shoes."
         />
